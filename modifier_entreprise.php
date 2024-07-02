@@ -12,9 +12,7 @@ if (isset($_GET['NumSIRET'])) {
     $stmt->execute();
     $entreprise = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if (!$entreprise) {
-        die("Entreprise non trouvée.");
-    }
+    
 } else {
     die("NumSIRET manquant.");
 }

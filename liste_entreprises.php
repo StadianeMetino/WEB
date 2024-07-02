@@ -57,6 +57,7 @@ try {
                             echo "<td>" . htmlspecialchars($entreprise['Description']) . "</td>";
                             echo "<td>" . htmlspecialchars($entreprise['NbInterne']) . "</td>";
                             echo "<td><a href='modifier_entreprise.php?NumSIRET=" . htmlspecialchars($entreprise['NumSIRET']) . "'>Modifier</a></td>";
+                            echo "<td><a href='supprimer_entreprise.php?NumSIRET=" . htmlspecialchars($entreprise['NumSIRET']) . "'>Supprimer</a></td>";
                             echo "</tr>";                            
                         }
                     }
@@ -64,7 +65,7 @@ try {
                        
                         echo "<tr><td colspan='4'>Aucune entreprise trouvée</td></tr>";
                     }
-                    
+
                     ?>
                 </tbody>
             </table>

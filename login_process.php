@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //form soumis
         // Préparer la requête SQL pour sélectionner l'utilisateur avec l'email entré
         $stmt = $pdo->prepare("SELECT * FROM utilisateurs WHERE Email = ? ");
         $stmt->execute([$email]);
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC); //Récupérer le résultat de la requête sous forme de tableau associatif
          
         if ($user) {
             // Récupérer le mot de passe haché depuis la base de données

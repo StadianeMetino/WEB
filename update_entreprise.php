@@ -7,11 +7,6 @@ $nom = $_POST['nom'];
 $description = $_POST['description'];
 $nbInterne = $_POST['nb_interne'];
 
-echo "NumSIRET: $numSIRET<br>";
-echo "Nom: $nom<br>";
-echo "Description: $description<br>";
-echo "Nombre d'Internes: $nbInterne<br>";
-
 try {
     // Préparer la requête SQL de mise à jour
     $sql = "UPDATE entreprise SET Nom = :nom, Description = :description, NbInterne = :nbInterne WHERE NumSIRET = :numSIRET";
